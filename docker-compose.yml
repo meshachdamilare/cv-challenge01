@@ -4,19 +4,19 @@ include:
 services:
 
   nginx:
-    image: 'jc21/nginx-proxy-manager:2.10.4'
+    image: 'nginx:latest'
     container_name: nginx
     ports:
       - '80:80'
-      - '443:443'
-      - '8090:81'
+      # - '443:443'
+      # - '8090:81'
     restart: always
     environment:
       DB_SQLITE_FILE: "/data/database.sqlite"
     volumes:
-      # - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - data:/data
-      - letsencrypt:/etc/letsencrypt
+       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      # - data:/data
+      # - letsencrypt:/etc/letsencrypt
     depends_on:
       - frontend
       - backend
