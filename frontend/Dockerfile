@@ -10,6 +10,6 @@ COPY . .
 
 EXPOSE 5173 
 
-CMD ["npm", "run", "dev", "--", "--host", "107.21.239.239"]
+CMD ["npm", "run", "dev", "--", "--host"]
 
 

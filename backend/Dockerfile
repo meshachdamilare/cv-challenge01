@@ -22,5 +22,5 @@ ENV PYTHONPATH=/backend
 
 EXPOSE 8000
 
-CMD ["bash", "-c", "poetry run bash ./prestart.sh && poetry run uvicorn app.main:app --reload --host 107.21.239.239 --port 8000"]
+CMD ["bash", "-c", "poetry run bash ./prestart.sh && poetry run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"]
 
